@@ -1,0 +1,11 @@
+<template>
+    <template if:true={mAccountList.data}>
+        <div class="slds-grid slds-wrap slds-grid--vertical-stretch">
+            <template for:each={mAccountList.data} for:item="account">
+                <div key={account.Id} class="slds-col slds-size_1-of-3 slds-p-around_medium">
+                    <c-card-component key={account.Id} cardaccount={account}></c-card-component>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

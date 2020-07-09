@@ -1,0 +1,13 @@
+<template>
+    <div>
+        <div >
+            <c-pick-list-search onsearchtermselected={handleSearchSelectEvent}></c-pick-list-search>
+        </div>
+        <br />
+        <div>
+            <template if:true={searchTermFromEvent}>
+                <c-search-result selected-item={searchTermFromEvent}></c-search-result>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <article class="slds-card" style="padding:top 10px;">
+        <lightning-icon icon-name="standard:account" alternative-text="Account" title="Account"></lightning-icon>
+        <lightning-card title={cardaccount.Name}>
+            <div class="slds-p-left_small">
+                <b>Id-</b>{cardaccount.Name} <br />
+                <b>Type-</b>{cardaccount.Type}<br />
+                <b>Industry-</b>{cardaccount.Industry}<br />
+                <b>Contact Number-</b>{cardaccount.Phone}<br />
+                <b>Website-</b>{cardaccount.Website}<br />
+
+            </div>
+            <lightning-button label="Detail" slot="footer" onclick={showDetailsRecord}></lightning-button>
+        </lightning-card>
+    </article>
+
+</template>

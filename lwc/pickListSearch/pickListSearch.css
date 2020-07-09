@@ -1,0 +1,8 @@
+.bgColor{
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px;
+    margin: 4px;
+    width: 800px;
+    height: 200px;
+}

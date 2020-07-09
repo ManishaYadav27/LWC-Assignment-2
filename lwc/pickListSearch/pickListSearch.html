@@ -1,0 +1,18 @@
+<template>
+    <div class=' slds-media__body slds-wrap bgColor'>
+        <div class = 'slds-p-bottom_large slds-text-heading_small'>
+            <h4><b>Search Accounts</b></h4>
+        </div>
+        <div class='slds-grid slds-align_absolute-center'>
+            <div class="slds-size_1-of-4"></div>
+            <div class="slds-size_2-of-4 slds-float_right slds-p-right_small">
+                <lightning-combobox label="Select Type" value={selectedItem} placeholder="Choose Types"
+                    options={options} onchange={handleChange}></lightning-combobox>
+            </div>
+            <div class=" slds-size_1-of-4 slds-float_left slds-p-left_small slds-p-top_large">
+                <lightning-button label='Search' onclick={handleTypeSearch} variant='brand'></lightning-button>
+            </div>
+            
+        </div>
+    </div>
+</template>

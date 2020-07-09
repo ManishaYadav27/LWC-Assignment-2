@@ -1,0 +1,32 @@
+<template>
+    <div class='bgColor'>
+        <template if:true={showMode}>
+            <lightning-card title="Account Details">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="Account Name" value={name} data-field="name"
+                        read-only={setEdit}></lightning-input>
+                    <lightning-input type="text" label="Type" value={type} data-field="type" read-only={setEdit}>
+                    </lightning-input>
+                    <lightning-input type="text" label="Industry" value={industry} data-field="industry"
+                        read-only={setEdit}></lightning-input>
+                    <lightning-input type="text" label="Contact Number" value={phone} data-field="phone"
+                        read-only={setEdit}></lightning-input>
+                    <lightning-input type="text" label="Website" value={website} data-field="website"
+                        read-only={setEdit}></lightning-input><br />
+                    <template if:true={hideButton}>
+                        <div class="slds-grid  slds-p-top_large slds-p-left_small">
+                            <lightning-button class="slds-size_2-of-4 slds-align_absolute-center" label="Save"
+                                slot="footer" onclick={updateAccount}></lightning-button>
+                            <lightning-button class="slds-size_2-of-4 slds-align_absolute-center" label="Cancel"
+                                slot="footer" onclick={handleCancel}></lightning-button>
+                        </div>
+                    </template>
+                </div>
+
+                <lightning-button hidden={hideEdit} label="Edit" slot="actions" onclick={handleEdit}></lightning-button>
+
+            </lightning-card>
+
+        </template>
+    </div>
+</template>
